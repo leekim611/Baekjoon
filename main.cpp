@@ -1,5 +1,9 @@
 #include <iostream>
+#include <stdlib.h>
+using namespace std;
 
 int main() {
-    std::cout << "hello world!" << std::endl;
+    cout << "\\    /\\" << endl << " )  ( ')" << endl << "(  /  )" << endl << " \\(__)|";
 }
+
+// https://code-giraffe.tistory.com/9 from AnJiWon
