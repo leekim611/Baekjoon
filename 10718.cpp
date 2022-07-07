@@ -1,9 +1,13 @@
+/* 
+    í’€ì´ ë‚ ì§œ: 220707
+*/
+
 #include <iostream>
 
 using namespace std;
 
 int main() {
     for (int i = 0; i < 2; i++) {
-        cout << "°­ÇÑÄ£±¸ ´ëÇÑÀ°±º" << endl;
+        cout << "ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" << endl;
     }
 }
