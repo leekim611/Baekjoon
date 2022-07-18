@@ -5,7 +5,11 @@
         "new": "cpp",
         "random": "cpp",
         "cmath": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

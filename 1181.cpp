@@ -4,10 +4,19 @@
 
 #include <iostream>
 #include <algorithm>
+#include <set>
 
 using namespace std;
 
+bool comp(string a, string b) {
+    return a.length() < b.length();
+}
+
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
     int size, rep = 0;
     cin >> size;
     int temp = size;
@@ -24,7 +33,7 @@ int main() {
         }
     }
 
-    stable_sort(arr, arr+temp);
+    stable_sort(arr, arr+temp, comp);
 
     for (int i = 0; i < temp; i++) {
         for (int j = i+1; j < temp; j++) {
