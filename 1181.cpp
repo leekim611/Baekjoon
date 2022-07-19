@@ -1,53 +1,39 @@
 /* 
-    풀이 날짜: 220718
+    풀이 날짜: 220719
 */
 
 #include <iostream>
 #include <algorithm>
-#include <set>
 
 using namespace std;
 
 bool comp(string a, string b) {
-    return a.length() < b.length();
+    if (a.length() == b.length()) {
+        return a < b;
+    } else {
+        return a.length() < b.length();
+    }
 }
+
+string arr[20000];
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
 
-    int size, rep = 0;
-    cin >> size;
-    int temp = size;
-    string *arr = new string[size];
+    int rep;
+    cin >> rep;
 
-    for (int i = 0; i < temp; i++) {
-        string str;
-        cin >> str;
-        string *p = find(arr, arr+temp, str);
-        if (p == arr+temp) {
-            arr[i] = str;
-        } else {
-            rep++;
-        }
+    for (int i = 0; i < rep; i++) {
+        cin >> arr[i];
     }
 
-    stable_sort(arr, arr+temp, comp);
+    sort(arr, arr+rep, comp);
 
-    for (int i = 0; i < temp; i++) {
-        for (int j = i+1; j < temp; j++) {
-            string str;
-            if (arr[i].size() > arr[j].size()) {
-                str = arr[i];
-                arr[i] = arr[j];
-                arr[j] = str;
-            }
+    for (int i = 0; i < rep; i++) {
+        if (arr[i-1] != arr[i]) {
+            cout << arr[i] << "\n";
         }
-    }
-
-
-    for (int i = rep; i < size; i++) {
-        cout << arr[i] << endl;
     }
 }

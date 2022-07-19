@@ -1,5 +1,5 @@
 /* 
-    풀이 날짜: 220718
+    풀이 날짜: 220719
 */
 
 #include <iostream>
@@ -12,21 +12,26 @@ int main() {
     cin.tie(NULL);
     cout.tie(NULL);
 
-    multimap<long long, int> map;
-
-    int rep, input;
-    cin >> rep;
-
-    while(rep--) {
-        cin >> input;
-        map.insert(pair<long long, int>(input, 0));
+    map<int, int> m;
+    int rep1, rep2, key;
+    cin >> rep1;
+    while(rep1--) {
+        cin >> key;
+        if (m.find(key) != m.end()) {
+            m[key]++;
+        } else {
+            m.insert({key, 1});
+        }
     }
 
-    int rep2, input2;
     cin >> rep2;
-    while(rep2--) {
-        cin >> input2;
-        cout << map.count(input2) << " ";
-    }
 
+    while(rep2--) {
+        cin >> key;
+        if (m.find(key) != m.end()) {
+            cout << m[key] << " ";
+        } else {
+            cout << 0 << " ";
+        }
+    }
 }
