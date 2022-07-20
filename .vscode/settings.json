@@ -1,16 +1,5 @@
 {
     "files.associations": {
-        "iostream": "cpp",
-        "ostream": "cpp",
-        "new": "cpp",
-        "random": "cpp",
-        "cmath": "cpp",
-        "algorithm": "cpp",
-        "deque": "cpp",
-        "string": "cpp",
-        "unordered_map": "cpp",
-        "vector": "cpp",
-        "queue": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "Disabled"
+        "iosfwd": "cpp"
+    }
 }
